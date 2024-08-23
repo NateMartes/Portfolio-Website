@@ -12,3 +12,11 @@
 .icons a{
     padding: 10px;
 }
+.icon:hover{
+    filter: invert(40%) sepia(17%) saturate(1175%) hue-rotate(164deg) brightness(95%) contrast(86%);
+}
+@media (max-width: 850px){
+    .main{
+        max-width: 100%;
+    }
+}

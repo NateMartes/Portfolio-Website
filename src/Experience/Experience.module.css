@@ -1,6 +1,8 @@
 .main {
     display: flex;
     justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 .main > p {
     max-width: 20%;
@@ -25,4 +27,16 @@
 }
 .icons img{
     padding: 10px;
+}
+@media (max-width: 850px){
+    .main{
+      flex-direction: column;
+    }
+    .main > p {
+        max-width: 100%;
+        margin: 0;
+    }
+    .experienceMain{
+      max-width: 100%;
+    }
 }
