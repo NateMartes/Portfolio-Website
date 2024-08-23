@@ -1,0 +1,14 @@
+.main{
+    max-width: 70%;
+}
+.icon {
+    width: 48px;
+    height: 48px;
+    filter: invert(100%) sepia(97%) saturate(21%) hue-rotate(178deg) brightness(104%) contrast(102%); /*white filter */
+}
+.icons {
+    display: flex;
+}
+.icons a{
+    padding: 10px;
+}

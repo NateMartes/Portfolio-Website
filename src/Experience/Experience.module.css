@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+.main > p {
+    max-width: 20%;
+    margin: 0;
+}
+.experienceMain{
+    max-width: 70%;
+}
+.experienceMain > h3{
+    margin: 0;
+}
+.icon {
+    width: 48px;
+    height: 48px;
+    filter: invert(100%) sepia(97%) saturate(21%) hue-rotate(178deg) brightness(104%) contrast(102%); /*white filter */
+}
+.icons {
+    display: flex;
+}
+.icons {
+    display: flex;
+}
+.icons img{
+    padding: 10px;
+}
