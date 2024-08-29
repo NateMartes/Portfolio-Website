@@ -1,5 +1,6 @@
 import styles from './Experience.module.css';
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 function Experience(props){
 
     const endStatus = props.present ? "Present" : `${props.endMonth} ${props.endYear}`
@@ -23,10 +24,15 @@ function Experience(props){
                 return "src/assets/mysql.svg";
             case "Git":
                 return "src/assets/git.svg";
+            case "Python":
+                return "src/assets/python.svg";
+            case "Tableau":
+                return "src/assets/tableau.svg";
         }
     }
+    const [isVisible, setIsVisible] = useState(false);
     return(
-        <div className={styles.main}>
+        <div className={`${styles.main} ${isVisible ? 'show' : ''}`}>
             <p>{`${props.startMonth} ${props.startYear} — ${endStatus}`}</p>
             <div className={styles.experienceMain}>
                 <h3>{props.name} | {props.location}</h3>

@@ -1,5 +1,6 @@
 import styles from './Project.module.css';
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 function Project(props){
 
     function getIcon(name){
@@ -22,13 +23,18 @@ function Project(props){
                 return "src/assets/mysql.svg";
             case "Git":
                 return "src/assets/git.svg";
+            case "Python":
+                return "src/assets/python.svg";
+            case "Tableau":
+                return "src/assets/tableau.svg";
         }
     }
+    const [isVisible, setIsVisible] = useState(false);
     return(
-        <div className={styles.main}>
-            <img src="src/assets/elementor-placeholder-image.avif" width={200} height={150}></img>
+        <div className={`${styles.main} ${isVisible ? 'show' : ''}`}>
+            <img src={props.img ? props.img: "src/assets/elementor-placeholder-image.avif"} width={200} height={150}></img>
             <div className={styles.projectMain}>
-                <h3><a href={props.link}>{props.name}<img src="src/assets/open.svg"></img></a></h3>
+                <h3>{props.link ? <a href={props.link}>{props.name}<img src="src/assets/open.svg"></img></a> : props.name}</h3>
                 <p></p>
                 <p>{props.content}</p>
                 <div className={styles.icons}>
@@ -45,13 +51,15 @@ Project.propTypes = {
     name: PropTypes.string,
     link: PropTypes.string,
     content: PropTypes.string,
+    img: PropTypes.string,
     utilities: PropTypes.arrayOf(PropTypes.string)
 }
 Project.defaultProps = {
     name: "Name",
-    link: "www.github.com",
+    link: null,
     content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam obcaecati recusandae dignissimos \
     iste maiores, alias modi magni sit dolorum eveniet. Voluptas nisi molestiae aliquid autem corrupti excepturi fugit aut fuga",
+    img: null,
     utilities:[""]
 }
 export default Project

@@ -39,6 +39,12 @@ a > img {
     height: 24px;
     filter: invert(100%) sepia(97%) saturate(21%) hue-rotate(178deg) brightness(104%) contrast(102%); /*white filter */
 }
+a:hover{
+  color: #466f8e
+}
+a:hover img{
+  filter: invert(40%) sepia(17%) saturate(1175%) hue-rotate(164deg) brightness(95%) contrast(86%);
+}
 @media (max-width: 850px){
   .main{
     flex-direction: column;
