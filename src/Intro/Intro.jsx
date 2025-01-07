@@ -1,7 +1,7 @@
 import styles from './Intro.module.css';
-import Github from '../assets/github.svg';
-import LinkedIn from '../assets/linkedIn.svg';
-import Instagram from '../assets/instagram.svg';
+import Github from '/assets/github.svg';
+import LinkedIn from '/assets/linkedIn.svg';
+import Instagram from '/assets/instagram.svg';
 import { useState, useEffect } from 'react';
 function Intro(){
     const [isVisible, setIsVisible] = useState(false);

@@ -7,27 +7,27 @@ function Experience(props){
     function getIcon(name){
         switch (name){
             case "Docker":
-                return "src/assets/docker.svg";
+                return "/assets/docker.svg";
             case "Kubernetes":
-                return "src/assets/kubernetes.svg";
+                return "/assets/kubernetes.svg";
             case "Wordpress":
-                return "src/assets/wordpress.svg";
+                return "/assets/wordpress.svg";
             case "Linux":
-                return "src/assets/linux.svg";
+                return "/assets/linux.svg";
             case "Bash":
-                return "src/assets/bash.svg";
+                return "/assets/bash.svg";
             case "Ansible":
-                return "src/assets/ansible.svg";
+                return "/assets/ansible.svg";
             case "Java":
-                return "src/assets/java.svg";
+                return "/assets/java.svg";
             case "MySQL":
-                return "src/assets/mysql.svg";
+                return "/assets/mysql.svg";
             case "Git":
-                return "src/assets/git.svg";
+                return "/assets/git.svg";
             case "Python":
-                return "src/assets/python.svg";
+                return "/assets/python.svg";
             case "Tableau":
-                return "src/assets/tableau.svg";
+                return "/assets/tableau.svg";
         }
     }
     const [isVisible, setIsVisible] = useState(false);

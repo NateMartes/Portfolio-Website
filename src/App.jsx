@@ -36,11 +36,11 @@ function App() {
       content="Built a GUI application with a team
       that allows users to save, copy, import, and export passwords. All passwords are stored behind a
       vault password that is hashed using the SHA-256 algorithm. Importing and exporting passwords is done via OpenCSV." 
-      link="https://github.com/NateMartes/CipherX" img="src/assets/cipherx.avif" utilities={["Java","MySQL","Git"]}/>
+      link="https://github.com/NateMartes/CipherX" img="/assets/cipherx.avif" utilities={["Java","MySQL","Git"]}/>
 
       <Project name="Recipe Book" 
       content="Utilized Python and the Tkinter Library to create a GUI Recipe Book with a team. Users can view over 50 recipes and add their own.
-      Recipes are stored using JSON." img="src/assets/recipebook.avif" utilities={["Python"]}/>
+      Recipes are stored using JSON." img="/assets/recipebook.avif" utilities={["Python"]}/>
 
       <p>Built In React JS, Inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a></p>
     </div>
