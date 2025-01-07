@@ -28,6 +28,12 @@ function Experience(props){
                 return "/assets/python.svg";
             case "Tableau":
                 return "/assets/tableau.svg";
+            case "Azure":
+                return "/assets/azure.svg";
+            case "Node.JS":
+                return "/assets/nodejs.svg";
+            case "TypeScript":
+                return "/assets/typescript.svg";
         }
     }
     const [isVisible, setIsVisible] = useState(false);
