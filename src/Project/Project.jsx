@@ -34,7 +34,7 @@ function Project(props){
         <div className={`${styles.main} ${isVisible ? 'show' : ''}`}>
             <img src={props.img ? props.img: "/assets/elementor-placeholder-image.avif"} width={200} height={150}></img>
             <div className={styles.projectMain}>
-                <h3>{props.link ? <a href={props.link}>{props.name}<img src="src/assets/open.svg"></img></a> : props.name}</h3>
+                <h3>{props.link ? <a href={props.link}>{props.name}<img src="/assets/open.svg"></img></a> : props.name}</h3>
                 <p></p>
                 <p>{props.content}</p>
                 <div className={styles.icons}>
