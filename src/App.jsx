@@ -16,19 +16,19 @@ function App() {
       <h2>Experience</h2>
       <Experience name="System Administrator" location="Wilkes University" 
       startMonth="Jun" startYear={2024} present={true}
-      content="Managed workstations utilized by over 100 people using Ansible and Migrated 30 machines over from 
-      Ubuntu 24.04 to Pop!_OS 22.04 and configured several software including OpenSSH and NFS. Mangned several 100 users across the University." utilities={["Bash","Ansible","Linux"]}/>
+      content="I manage Linux workstations used by over 100 people with Ansible, including migrating 30 machines from Ubuntu 24.04 to Pop!_OS 22.04. 
+      Configured key software such as OpenSSH and NFS. Also set up SSL certificates using Let’s Encrypt for university websites accessed by professors and students." utilities={["Bash","Ansible","Linux"]}/>
 
       <Experience name="Cloud Researcher" location="Wilkes University" 
       startMonth="Jun" startYear={2024} endMonth="Aug" endYear={2024} 
-      content="Developed a 4 node, Kubernetes cluster to simulate an Amazon EKS environment, 
-      utilizing several Kubernetes services such as Ingress and Persistent Volume Claims. 
-      Created a WordPress website to display undergraduate research of Harper’s Monthly Pulpit." utilities={["Kubernetes","Docker","Wordpress","Linux"]}/>
+      content="I Developed a scalable 4-node Kubernetes cluster to simulate an Amazon EKS environment, 
+      leveraging Kubernetes services like Ingress and Persistent Volume Claims. Built a WordPress website with over 15 pages to showcase 
+      undergraduate research on Harper’s Monthly Pulpit." utilities={["Kubernetes","Docker","Wordpress","Linux"]}/>
 
       <Experience name="Data Research Assitant" location="Wilkes University" 
       startMonth="Jan" startYear={2024} endMonth="Mar" endYear={2024} 
-      content="Analyzed methodological diversity of over 77 academic professors to find correlations in methodologies across disciplines. 
-              Utilized Python to create a Spearman Correlation Matrix, revealing 2 out of 12 axes being moderately correlated. Displayed results using Tableau, scoring 89 out of 100 on the judging 
+      content="I Analyzed methodological diversity of over 77 academic professors to find correlations in methodologies across disciplines. 
+              Utilized Python to create a Spearman Correlation Matrix, revealing 2 out of 12 axes being moderately correlated. Displayed results using Tableau, scoring a 89% on the judging 
               report at the 78th Annual Eastern Colleges Science Conference (ECSC) at Niagara University." utilities={["Python","Tableau"]}/>
 
       <h2>Projects</h2>
