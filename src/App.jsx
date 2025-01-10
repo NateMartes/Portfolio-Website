@@ -32,8 +32,13 @@ function App() {
               report at the 78th Annual Eastern Colleges Science Conference (ECSC) at Niagara University." utilities={["Python","Tableau"]}/>
 
       <h2>Projects</h2>
-      <Project name="CipherX" 
-      content="Built a GUI application with a team
+      <Project name="HTTP Server From Scratch"
+      content="Developed a HTTP server using Node.JS, Node.JS’s .net library, and TypeScript. 
+      Implemented a TCP server with a dynamic buffer to correctly parse HTTP requests and send HTTP responses depending on the corresponding URI."
+      link="https://github.com/NateMartes/HTTP-Server" img="/assets/http.avif" utilities={["Node.JS","TypeScript","Git"]}/>
+
+      <Project name="Password Manager" 
+      content="Built a GUI application with a team of 3
       that allows users to save, copy, import, and export passwords. All passwords are stored behind a
       vault password that is hashed using the SHA-256 algorithm. Importing and exporting passwords is done via OpenCSV." 
       link="https://github.com/NateMartes/CipherX" img="/assets/cipherx.avif" utilities={["Java","MySQL","Git"]}/>
