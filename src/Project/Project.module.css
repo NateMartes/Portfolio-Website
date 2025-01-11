@@ -1,8 +1,10 @@
 .main {
     display: flex;
-    justify-content: space-between;
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+.main img {
+    flex-shrink: 0;
 }
 .main > p {
     max-width: 20%;
@@ -10,6 +12,7 @@
 }
 .projectMain{
     max-width: 70%;
+    margin-left: 5rem;
 }
 .projectMain > h3{
     margin: 0;
@@ -59,5 +62,6 @@ a:hover img{
   }
   .projectMain{
     max-width: 100%;
+    margin-left: 0;    
   }
 }
