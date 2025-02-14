@@ -14,18 +14,18 @@ function App() {
       <Intro/>
       <About/>
       <h2>Experience</h2>
-      <Experience name="System Administrator" location="Wilkes University" 
+      <Experience name="System Administrator Intern" location="Wilkes University" 
       startMonth="Jun" startYear={2024} present={true}
-      content="I manage Linux workstations used by over 100 people with Ansible, including migrating 30 machines from Ubuntu 24.04 to Pop!_OS 22.04. 
+      content="I manage Linux workstations used by over 1,100 people with Ansible, including migrating 30 machines from Ubuntu 24.04 to Pop!_OS 22.04. 
       Configured key software such as OpenSSH and NFS. Also set up SSL certificates using Let’s Encrypt for university websites accessed by professors and students." utilities={["Bash","Ansible","Linux"]}/>
 
-      <Experience name="Cloud Researcher" location="Wilkes University" 
+      <Experience name="DevOps Engineer Intern" location="Wilkes University" 
       startMonth="Jun" startYear={2024} endMonth="Aug" endYear={2024} 
       content="I Developed a scalable 4-node Kubernetes cluster to simulate an Amazon EKS environment, 
       leveraging Kubernetes services like Ingress and Persistent Volume Claims. Built a WordPress website with over 15 pages to showcase 
       undergraduate research on Harper’s Monthly Pulpit." utilities={["Kubernetes","Docker","Wordpress","Linux"]}/>
 
-      <Experience name="Data Research Assitant" location="Wilkes University" 
+      <Experience name="Data Science Intern" location="Wilkes University" 
       startMonth="Jan" startYear={2024} endMonth="Mar" endYear={2024} 
       content="I Analyzed methodological diversity of over 77 academic professors to find correlations in methodologies across disciplines. 
               Utilized Python to create a Spearman Correlation Matrix, revealing 2 out of 12 axes being moderately correlated. Displayed results using Tableau, scoring a 89% on the judging 
