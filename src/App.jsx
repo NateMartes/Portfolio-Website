@@ -14,6 +14,13 @@ function App() {
       <Intro/>
       <About/>
       <h2>Experience</h2>
+
+      <Experience name="DevSecOps Engineer Intern" location="Software Engineering Institute"
+      startMonth="May" startYear={2025} present={true}
+      content="Applied Systems Maintainer for Software Engineering Research."
+      utilities={[]}
+      />
+
       <Experience name="System Administrator Intern" location="Wilkes University" 
       startMonth="Jun" startYear={2024} present={true}
       content="I manage Linux workstations used by over 1,100 people with Ansible, including migrating 30 machines from Ubuntu 24.04 to Pop!_OS 22.04. 
@@ -23,7 +30,7 @@ function App() {
       startMonth="Jun" startYear={2024} endMonth="Aug" endYear={2024} 
       content="I Developed a scalable 4-node Kubernetes cluster to simulate an Amazon EKS environment, 
       leveraging Kubernetes services like Ingress and Persistent Volume Claims. Built a WordPress website with over 15 pages to showcase 
-      undergraduate research on Harper’s Monthly Pulpit." utilities={["Kubernetes","Docker","Wordpress","Linux"]}/>
+      undergraduate research on Harper’s Monthly Pulpit." utilities={["Kubernetes","Docker","Wordpress","Linux","HTML","CSS"]}/>
 
       <Experience name="Data Science Intern" location="Wilkes University" 
       startMonth="Jan" startYear={2024} endMonth="Mar" endYear={2024} 
@@ -32,10 +39,22 @@ function App() {
               report at the 78th Annual Eastern Colleges Science Conference (ECSC) at Niagara University." utilities={["Python","Tableau"]}/>
 
       <h2>Projects</h2>
+
+      <Project name="RoomReady (AI Image Anaylsis Web App), HenHacks 1st Place Hackaton Winner"
+      content="The app takes user uploaded images about a room they are interested for 
+      preparing for natural disasters. Then we use selective prompting and generative AI on the received image. 
+      Then we give back the user a risk analysis report about risks in the room. We also give them with a check list and a list of improvements to make in the room."
+      link="https://devpost.com/software/roomready" img="/assets/roomready.avif" utilities={["Python","FastAPI","AI","TypeScript","React","Git","Docker"]}/>
+
+      <Project name="Wilkes University Course Web Scraper"
+      content="Created a parallel web scraper to gather Wilkes University’s course data using Golang, MongoDB, and Docker.
+      Implemented a RESTful API to query a NoSQL database with dynamic query parameters."
+      link="https://github.com/Ichmagkase/WilkesU-Course-Web-Scraper" img="/assets/wilkes-scrapy.avif" utilities={["Go","MongoDB","HTML","Git","Docker"]}/>
+
       <Project name="HTTP Server From Scratch"
       content="Developed a HTTP server using Node.JS, Node.JS’s .net library, and TypeScript. 
       Implemented a TCP server with a dynamic buffer to correctly parse HTTP requests and send HTTP responses depending on the corresponding URI."
-      link="https://github.com/NateMartes/HTTP-Server" img="/assets/http.avif" utilities={["Node.JS","TypeScript","Git"]}/>
+      link="https://github.com/NateMartes/HTTP-Server" img="/assets/http.avif" utilities={["NodeJS","TypeScript","Git"]}/>
 
       <Project name="Password Manager" 
       content="Built a GUI application with a team of 3

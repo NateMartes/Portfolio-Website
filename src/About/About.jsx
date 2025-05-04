@@ -10,11 +10,8 @@ function About(){
                 I realized how integral software is to our daily lives, shaping everything from how we 
                 communicate to how we solve complex problems. This journey has not only honed my technical skills but also deepened my understanding of the profound impact that software has on society. 
                 My drive to contribute to this ever-evolving 
-                field continues to grow as I learn more about its limitless possibilities.</p>
-            <p>I have experience working with various programming languages and software tools, including: JavaScript, TypeScript, Java, Python, Kubernetes, Docker, and 
-                Git. Outside of tech, I am also an Assistant Instructor at a martial arts school, where I lead several students, teaching them several 
-                self-defense techniques and martial arts forms. My diverse experiences reflect my dedication to both technology and community. I'm a driven 
-                Computer Science Honors student, committed to continuously enhancing my skills and knowledge in the ever-evolving tech landscape.</p>
+                field continues to grow as I learn more about its limitless possibilities.
+            </p>
         </div>
     )
 }

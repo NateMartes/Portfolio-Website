@@ -3,39 +3,12 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 function Project(props){
 
+
+    
     function getIcon(name){
-        switch (name){
-            case "Docker":
-                return "/assets/docker.svg";
-            case "Kubernetes":
-                return "/assets/kubernetes.svg";
-            case "Wordpress":
-                return "/assets/wordpress.svg";
-            case "Linux":
-                return "/assets/linux.svg";
-            case "Bash":
-                return "/assets/bash.svg";
-            case "Ansible":
-                return "/assets/ansible.svg";
-            case "Java":
-                return "/assets/java.svg";
-            case "MySQL":
-                return "/assets/mysql.svg";
-            case "Git":
-                return "/assets/git.svg";
-            case "Python":
-                return "/assets/python.svg";
-            case "Tableau":
-                return "/assets/tableau.svg";
-            case "Azure":
-                return "/assets/azure.svg";
-            case "Node.JS":
-                return "/assets/nodejs.svg";
-            case "TypeScript":
-                return "/assets/typescript.svg";
-            
-        }
+                return `/assets/${name.toLowerCase()}.svg`;
     }
+
     const [isVisible, setIsVisible] = useState(false);
     return(
         <div className={`${styles.main} ${isVisible ? 'show' : ''}`}>
