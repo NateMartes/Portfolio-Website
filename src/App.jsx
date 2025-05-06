@@ -47,7 +47,7 @@ function App() {
       The player(s) may move around the dungeon, fight enemy, purchase tools, and earn the crown."
       link="https://github.com/NateMartes/crown-of-the-abyss-v2"
       img="/assets/cotb-output.avif"
-      ulilities={["Python","SQLite","FastAPI","Docker","Git"}/>
+      ulilities={["Python","SQLite","FastAPI","Docker","Git"]}/>
 
       <Project name="RoomReady (AI Image Anaylsis Web App), HenHacks 1st Place Hackaton Winner"
       content="The app takes user uploaded images about a room they are interested for 
