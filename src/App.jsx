@@ -40,6 +40,15 @@ function App() {
 
       <h2>Projects</h2>
 
+      <Project name="Crown of the Abyss"
+      content="Created A 4-player turn-based dungeon crawler using microservices. Built with Pygame, FastAPI, and SQLite.
+      Designed microservice architecture which features a RESTful API and Websockets for connection between players.
+      Deployed CI/CD pipelines with GitLab, Docker, and Pytest to lint, test, and deploy microservices.
+      The player(s) may move around the dungeon, fight enemy, purchase tools, and earn the crown."
+      link="https://github.com/NateMartes/crown-of-the-abyss-v2"
+      img="/assets/cotb-output.avif"
+      ulilities={["Python","SQLite","FastAPI","Docker","Git"}/>
+
       <Project name="RoomReady (AI Image Anaylsis Web App), HenHacks 1st Place Hackaton Winner"
       content="The app takes user uploaded images about a room they are interested for 
       preparing for natural disasters. Then we use selective prompting and generative AI on the received image. 
