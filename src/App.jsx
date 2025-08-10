@@ -17,7 +17,11 @@ function App() {
 
       <Experience name="DevSecOps Engineer Intern" location="Software Engineering Institute"
       startMonth="May" startYear={2025} present={true}
-      content="Applied Systems Maintainer for Software Engineering Research."
+      content="I used Python, Git, Docker, and a REST API to create a vulnerability detector for installed software packages across all internally managed systems, cutting potential vulnerability detection time from 30 days down to 1 day.
+Corrected 4,400+ SQLite entries with Python, achieving 100% accuracy in quarterly software license usage reports.
+Built a Python and REST API tool to detect duplicate software license usage, saving 2 hours of manual data analysis.
+Integrated 80+ test cases for internal Atlassian suite applications into DevOps CI/CD pipelines using Python, Pytest, and REST APIs, preventing deployment of misconfigured Docker containers.
+Collaborated in an Agile environment using Jira to track project progress and participate in daily Stand-Up meetings, enhancing team communication and improving overall project understanding."
       utilities={[]}
       />
 
