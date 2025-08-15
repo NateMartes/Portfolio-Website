@@ -1,5 +1,6 @@
 import styles from "./TheSecretOfUs.module.css"
 import downArrow from "/assets/down-arrow.svg"
+import cinnamaroll from "/assets/cinnamaroll.png"
 import { useEffect } from "react"
 
 function TheSecretOfUs() {
@@ -25,12 +26,12 @@ function TheSecretOfUs() {
       <h1 className={styles.theSecretOfUs}> Hello World! </h1>
       <div className={styles.theSecretOfUs}>
         <h1> Hello World! </h1>
-        <img class={styles.theSecretOfUsDownArrow} src="/assets/down-arrow.svg" type="svg"/>
+        <img class={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
       </div>
       <div className={styles.theSecretOfUs}>
-        <img src="/assets/cinnamaroll.png" />
+        <img src={cinnamaroll} />
         <h1> Hello World! </h1>
-        <img class={styles.theSecretOfUsDownArrow} src="/assets/down-arrow.svg" type="svg"/>
+        <img class={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
       </div>
     </>
   );
