@@ -3,6 +3,7 @@ import About from "./About/About"
 import Experience from "./Experience/Experience"
 import Project from "./Project/Project"
 import { useState, useEffect } from 'react';
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
