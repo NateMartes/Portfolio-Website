@@ -6,6 +6,8 @@ import catNerd from "/assets/cat-nerd.jpg"
 import shark from "/assets/shark.jpeg"
 import berries from "/assets/berries.jpeg"
 import motivation from "/assets/motivation.jpeg"
+import catSad from "/assets/cat-sad.jpeg"
+import catFlower from "/assets/cat-flower.jpeg"
 
 import { useEffect, useState } from "react"
 
@@ -44,7 +46,7 @@ function TheSecretOfUs() {
       </div>
       <div className={styles.theSecretOfUs}>
         <img src={cinnamaroll} height="250px" width="250px" />
-        <h2>I love you because you smell so amazing, just like this wild Cinamaroll.</h2>
+        <h2>I love you because you smell so amazing, like vanilla and peaches! Just like this wild Cinamaroll.</h2>
         <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
       </div>
       <div className={styles.theSecretOfUs}>
@@ -62,6 +64,24 @@ function TheSecretOfUs() {
         <img src={motivation} height="250px" width="250px" />
         <h2>I love you because you motivate me to be the best version of myself, and I am forever grateful for that baby.</h2>
         <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <h2>I'm sorry for making you feel sad when I don't mean it :(</h2>
+        <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <h2>I'm sorry when I forget something really important. I'm sorry when I sometimes fall short of being your perfect man.</h2>
+        <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <img src={catSad} height="250px" width="250px" />
+        <h2>And I PROMISE to be better in the future. This is my first time at life too, so sometimes its not easy. But you make it better :)</h2>
+        <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <img src={catFlower} height="250px" width="250px" />
+        <h2>I hope this makes up for it my love. I cannot wait to spend the rest of my life with you! I cannot wait to grow and build my life with you and you only</h2>
+        <h3> Yours truly, Nathaniel </h3>
       </div>
     </>
   );
