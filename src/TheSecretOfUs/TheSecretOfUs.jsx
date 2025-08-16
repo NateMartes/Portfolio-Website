@@ -3,6 +3,10 @@ import downArrow from "/assets/down-arrow.svg"
 import cinnamaroll from "/assets/cinnamaroll.png"
 import catHeart from "/assets/cat-heart.jpeg"
 import catNerd from "/assets/cat-nerd.jpg"
+import shark from "/assets/shark.jpeg"
+import berries from "/assets/berries.jpeg"
+import motivation from "/assets/motivation.jpeg"
+
 import { useEffect, useState } from "react"
 
 function TheSecretOfUs() {
@@ -35,13 +39,28 @@ function TheSecretOfUs() {
       </div>
       <div className={styles.theSecretOfUs}>
         <img src={catNerd} height="250px" width="250px" />
-        <h2>I love you more than the digits in PI, which there are over 100 trillon according to Google.
-        Google has a way for me to get all the digits but your phone would explode so just trust me! :)</h2>
+        <h2>I love you more than the digits in PI, which there are over 100 trillon according to Google. :)</h2>
         <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
       </div>
       <div className={styles.theSecretOfUs}>
         <img src={cinnamaroll} height="250px" width="250px" />
         <h2>I love you because you smell so amazing, just like this wild Cinamaroll.</h2>
+        <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <img src={shark} height="250px" width="250px" />
+        <h2>I love you because you're so silly and you're silly with me, just like this <i><strong>hammer</strong>head</i> shark. Get it? cause it's a
+         ... well you get the point...</h2>
+        <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <img src={berries} height="250px" width="250px" />
+        <h2>This is us by the way.</h2>
+        <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
+      </div>
+      <div className={styles.theSecretOfUs}>
+        <img src={motivation} height="250px" width="250px" />
+        <h2>I love you because you motivate me to be the best version of myself, and I am forever grateful for that baby.</h2>
         <img className={styles.theSecretOfUsDownArrow} src={downArrow} type="svg"/>
       </div>
     </>
