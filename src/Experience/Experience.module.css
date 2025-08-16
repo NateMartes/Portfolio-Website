@@ -24,9 +24,7 @@
 }
 .icons {
     display: flex;
-}
-.icons {
-    display: flex;
+    flex-wrap: wrap;
 }
 .icons img{
     padding: 10px;

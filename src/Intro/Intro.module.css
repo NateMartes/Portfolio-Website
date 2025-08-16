@@ -8,6 +8,7 @@
 }
 .icons {
     display: flex;
+    flex-wrap: wrap;
 }
 .icons a{
     padding: 10px;
