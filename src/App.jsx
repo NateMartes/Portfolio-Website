@@ -18,7 +18,7 @@ function App() {
 
       <Experience name="Software Developer Intern" location="VetsEZ"
       startMonth="Sep" startYear={2025} present={true}
-      content="Constructing Resilient APIs for Stakeholders Constructing Resilient APIs for Stakeholders"/> 
+      content="Constructing Resilient APIs for Stakeholders"/> 
 
       <Experience name="System Administrator Intern" location="Wilkes University" 
       startMonth="Jun" startYear={2024} present={true}
