@@ -18,13 +18,14 @@ function App() {
 
       <Experience name="Software Developer Intern" location="VetsEZ"
       startMonth="Sep" startYear={2025} present={true}
-      content="Constructing Resilient APIs for Stakeholders Constructing Resilient APIs for Stakeholders"/> 
+      content="Constructing Resilient APIs for Stakeholders Constructing Resilient APIs for Stakeholders"
+      /> 
 
       <Experience name="System Administrator Intern" location="Wilkes University" 
       startMonth="Jun" startYear={2024} present={true}
       content="I manage Linux workstations used by over 100 people with Ansible, including migrating 30 machines from Ubuntu 24.04 to Pop!_OS 22.04. 
       Configured key software such as OpenSSH and NFS. Also set up SSL certificates using Let’s Encrypt for university websites accessed by professors and students."
-      utilities={["Bash","Ansible","Linux"]}/>
+      />
 
       <Experience name="DevSecOps Engineer Intern" location="Software Engineering Institute"
       startMonth="May" startYear={2025} endMonth="Aug" endYear={2025}

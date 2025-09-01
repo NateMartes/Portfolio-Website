@@ -46,6 +46,6 @@ Experience.defaultProps = {
     present: false,
     content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam obcaecati recusandae dignissimos \
     iste maiores, alias modi magni sit dolorum eveniet. Voluptas nisi molestiae aliquid autem corrupti excepturi fugit aut fuga",
-    utilities:[""]
+    utilities:[]
 }
 export default Experience
