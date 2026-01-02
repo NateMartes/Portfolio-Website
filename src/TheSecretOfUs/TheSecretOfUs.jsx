@@ -9,7 +9,7 @@ import motivation from "/assets/motivation.jpeg"
 import catSad from "/assets/cat-sad.jpeg"
 import catFlower from "/assets/cat-flower.jpeg"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 function TheSecretOfUs() {
 
