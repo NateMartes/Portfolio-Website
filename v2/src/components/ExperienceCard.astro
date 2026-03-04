@@ -1,0 +1,150 @@
+---
+interface Props {
+  role: string;
+  company: string;
+  startDate: string;
+  endDate?: string;
+  description: string[];
+  tech: string[];
+  delay?: number;
+}
+
+const { role, company, startDate, endDate = "Present", description, tech, delay = 1 } = Astro.props;
+---
+
+<article class={`experience-card brutal-border brutal-shadow reveal delay-${delay}`}>
+  <div class="card-header">
+    <div class="title-group">
+      <h3>{role}</h3>
+      <span class="company">@{company}</span>
+    </div>
+    <div class="date-badge brutal-border">
+      {startDate} — {endDate}
+    </div>
+  </div>
+    
+  <div class="card-content">
+    <div class="description">
+      {description.map(paragraph => (
+        <p>— {paragraph}</p>
+      ))}
+    </div>
+    
+    <div class="tech-stack">
+      {tech.map(item => (
+        <span class="tech-tag brutal-border">{item}</span>
+      ))}
+    </div>
+  </div>
+</article>
+
+<style>
+  .experience-card {
+    background: var(--bg-color);
+    margin-bottom: var(--spacing-xxl);
+    position: relative;
+    transition: all 0s;
+  }
+
+  .experience-card:hover {
+    background: var(--accent-color);
+  }
+
+  .experience-card:hover p,
+  .experience-card:hover h3,
+  .experience-card:hover .company {
+    color: var(--text-main); /* Project cards text goes white on hover */
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: var(--border-thick) solid var(--text-main);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .experience-card:hover .card-header {
+    border-color: var(--bg-color);
+  }
+
+  .title-group {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+  }
+
+  .company {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .date-badge {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    background: var(--text-main);
+    color: var(--bg-color);
+  }
+
+  .experience-card:hover .date-badge {
+    color: var(--text-main);
+    background: var(--bg-color);
+  }
+
+  .card-content {
+    padding: var(--spacing-lg);
+  }
+
+  .description {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .description p {
+    font-family: var(--font-mono);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-tag {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 0.25rem 0.5rem;
+    background: var(--bg-color);
+    color: var(--text-main);
+  }
+
+  .experience-card:hover .tech-tag {
+    background: var(--text-main);
+    color: var(--accent-color);
+    border-color: var(--bg-color);
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.8rem;
+    }
+    .date-badge {
+      font-size: 0.9rem;
+    }
+  }
+</style>

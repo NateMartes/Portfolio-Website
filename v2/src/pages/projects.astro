@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    name: "Lotlytics",
+    content: "Lotlytics is a cloud-native parking-intelligence platform. Edge devices count vehicles in real time; the web app shows live availability and turn-by-turn directions so drivers can plan trips and skip the circling. Works for Google Maps, Apple Maps, and Waze.",
+    link: "https://github.com/NateMartes/Lotlytics",
+    img: "/assets/lotlytics.avif",
+    utilities: ["Java", "Python", "TypeScript", "NextJS", "OpenCV", "AWS", "Vercel", "Spring Boot", "PostgreSQL", "DynamoDB"],
+    delay: 1
+  },
+  {
+    name: "Self Quest (Lehigh Hacks 2025)",
+    content: "Created a serverless full stack application using JavaScript, React, HTML, Tailwind CSS, Python, Git, and DynamoDB that creates AI interactive narrative chapters for therapy and user resonance which placed 1st with best use of AWS resources among 200+ participants at Lehigh University.",
+    link: "https://devpost.com/software/selfquest-4mp2d3",
+    img: "/assets/selfquest.avif",
+    utilities: ["AI", "Python", "JavaScript", "FastAPI", "AWS", "Git", "REST"],
+    delay: 2
+  },
+  {
+    name: "Crown of the Abyss",
+    content: "Created A 4-player turn-based dungeon crawler using microservices. Built with Pygame, FastAPI, and SQLite. Designed microservice architecture which features a RESTful API and Websockets for connection between players. Deployed CI/CD pipelines with GitLab, Docker, and Pytest to lint, test, and deploy microservices.",
+    link: "https://github.com/NateMartes/crown-of-the-abyss-v2",
+    img: "/assets/cotb-output.avif",
+    utilities: ["Python", "SQLite", "FastAPI", "Docker", "Git"],
+    delay: 3
+  },
+  {
+    name: "RoomReady (HenHacks 2025)",
+    content: "The app takes user uploaded images about a room they are interested for preparing for natural disasters. Then we use selective prompting and generative AI on the received image to give back a risk analysis report, a checklist, and a list of improvements.",
+    link: "https://devpost.com/software/roomready",
+    img: "/assets/roomready.avif",
+    utilities: ["Python", "FastAPI", "AI", "TypeScript", "React", "Docker"],
+    delay: 2
+  },
+  {
+    name: "Course Scraper",
+    content: "Created a parallel web scraper to gather Wilkes University’s course data using Golang, MongoDB, and Docker. Implemented a RESTful API to query a NoSQL database with dynamic query parameters.",
+    link: "https://github.com/Ichmagkase/WilkesU-Course-Web-Scraper",
+    img: "/assets/wilkes-scrapy.avif",
+    utilities: ["Go", "MongoDB", "HTML", "Git", "Docker"],
+    delay: 3
+  },
+  {
+    name: "HTTP Server from Scratch",
+    content: "Developed a HTTP server using Node.JS, Node.JS's .net library, and TypeScript. Implemented a TCP server with a dynamic buffer to correctly parse HTTP requests and send HTTP responses depending on the corresponding URI.",
+    link: "https://github.com/NateMartes/HTTP-Server",
+    img: "/assets/http.avif",
+    utilities: ["NodeJS", "TypeScript", "Git"],
+    delay: 4
+  },
+  {
+    name: "CipherX",
+    content: "Built a GUI application with a team of 3 that allows users to save, copy, import, and export passwords. All passwords are stored behind a vault password that is hashed using the SHA-256 algorithm.",
+    link: "https://github.com/NateMartes/CipherX",
+    img: "/assets/cipherx.avif",
+    utilities: ["Java", "MySQL", "Git"],
+    delay: 5
+  },
+  {
+    name: "Recipe Book",
+    content: "Utilized Python and the Tkinter Library to create a GUI Recipe Book with a team. Users can view over 50 recipes and add their own. Recipes are stored using JSON.",
+    img: "/assets/recipebook.avif",
+    utilities: ["Python"],
+    delay: 6
+  }
+];
+---
+
+<Layout title="Projects | Nathaniel Martes">
+  <div class="page-header reveal delay-1">
+    <div class="header-content brutal-border brutal-shadow">
+      <h1 class="page-title">PROJECT_ARCHIVE</h1>
+      <p class="page-subtitle">RAW OUTPUTS / BUILDS / EXPERIMENTS</p>
+    </div>
+  </div>
+
+  <section class="projects-container">
+    {projects.map(project => (
+      <ProjectCard {...project} />
+    ))}
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+  
+  .header-content {
+    background: var(--text-main);
+    padding: var(--spacing-xl);
+    display: inline-block;
+  }
+
+  .page-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--bg-color);
+    margin: 0;
+  }
+
+  .page-subtitle {
+    font-family: var(--font-mono);
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: var(--spacing-md);
+    background: var(--bg-color);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: var(--border-thick) solid var(--bg-color);
+  }
+
+  .projects-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--spacing-xxl);
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+      line-height: 1;
+      white-space: normal;
+    }
+    .page-subtitle {
+      font-size: 1rem;
+      white-space: normal;
+    }
+    .header-content {
+      padding: var(--spacing-md);
+      width: 100%;
+    }
+    .page-header {
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    .projects-container {
+      grid-template-columns: 1fr;
+      padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
+    }
+  }
+</style>

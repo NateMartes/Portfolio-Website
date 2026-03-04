@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+:root {
+    --bg-color: #000000;
+    --text-main: #FFFFFF;
+    --text-muted: #A0A0A0;
+    --accent-color: #0055FF;
+    /* Electric Blue */
+    --accent-hover: #0033CC;
+
+    --border-thick: 4px;
+    --border-thin: 2px;
+    --border-color: #333333;
+
+    --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 8rem;
+
+    /* Brutalism doesn't do smooth */
+    --transition-fast: 0s;
+    --transition-slow: 0s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-display);
+    line-height: 1.4;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* Sleek, subtle grid */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+::selection {
+    background: var(--accent-color);
+    color: var(--text-main);
+}
+
+/* Hard shapes, no border radius anywhere */
+button,
+input,
+.card,
+img,
+div {
+    border-radius: 0 !important;
+}
+
+/* Brutalist utility classes */
+.brutal-border {
+    border: var(--border-thick) solid var(--text-main);
+}
+
+.brutal-shadow {
+    box-shadow: 8px 8px 0px 0px var(--accent-color);
+}
+
+.brutal-shadow:hover {
+    box-shadow: 0px 0px 0px 0px var(--accent-color);
+    transform: translate(8px, 8px);
+}
+
+/* Block reveal */
+.reveal {
+    opacity: 0;
+    animation: flashBlock 0.5s steps(2, end) forwards;
+}
+
+@keyframes flashBlock {
+    0% {
+        opacity: 0;
+        background: var(--text-main);
+    }
+
+    50% {
+        opacity: 1;
+        background: var(--accent-color);
+        color: var(--bg-color);
+    }
+
+    100% {
+        opacity: 1;
+        background: transparent;
+    }
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}

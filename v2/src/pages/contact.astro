@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const links = [
+  { platform: "EMAIL", url: "mailto:nathaniel.martes.business@gmail.com", icon: "/assets/email.svg", delay: 1 },
+  { platform: "LINKEDIN", url: "https://www.linkedin.com/in/nathaniel-martes/", icon: "/assets/linkedIn.svg", delay: 2 },
+  { platform: "GITHUB", url: "https://github.com/NateMartes", icon: "/assets/github.svg", delay: 3 },
+  { platform: "MEDIUM", url: "https://medium.com/@nathaniel.martes.business", icon: "/assets/blog.svg", delay: 4 },
+  { platform: "INSTAGRAM", url: "https://www.instagram.com/nate_0901/", icon: "/assets/instagram.svg", delay: 5 }
+];
+---
+
+<Layout title="Contact | Nathaniel Martes">
+  <div class="contact-container">
+    <div class="links-grid">
+      {links.map(({ platform, url, icon, delay }) => (
+        <a href={url} target="_blank" rel="noopener noreferrer" class={`link-item brutal-border brutal-shadow reveal delay-${delay}`}>
+          <div class="platform-info">
+            {icon.startsWith('/') ? <img src={icon} class="platform-icon" alt={`${platform} icon`} /> : <span class="platform-emoji">{icon}</span>}
+            <span class="platform-name">{platform}</span>
+          </div>
+          <span class="arrow">↓</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px);
+    justify-content: center;
+  }
+
+  .links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    max-width: 1000px;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  .link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: var(--bg-color);
+    color: var(--text-main);
+    transition: all 0s;
+  }
+
+  .link-item:hover {
+    background: var(--text-main);
+    color: var(--bg-color);
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0px 0px var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .link-item:hover .platform-name,
+  .link-item:hover .arrow {
+    color: var(--bg-color);
+  }
+
+  .platform-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .platform-icon {
+    width: 60px;
+    height: 60px;
+    filter: brightness(0) invert(1);
+  }
+
+  .link-item:hover .platform-icon {
+    filter: brightness(0);
+  }
+
+  .platform-emoji {
+    font-size: 3.5rem;
+    line-height: 1;
+    filter: grayscale(100%) contrast(2);
+  }
+
+  .platform-name {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 900;
+  }
+
+  .arrow {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .link-item:hover .arrow {
+    transform: rotate(-90deg);
+  }
+
+  @media (max-width: 900px) {
+    .links-grid {
+      margin-left: 0;
+    }
+    .link-item {
+      padding: var(--spacing-md) var(--spacing-lg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-subtitle {
+      font-size: 1rem;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .header-content {
+      padding: var(--spacing-md);
+    }
+    .platform-name {
+      font-size: 1.25rem;
+    }
+    .platform-emoji {
+      font-size: 2rem;
+    }
+    .platform-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .arrow {
+      font-size: 2rem;
+    }
+  }
+</style>

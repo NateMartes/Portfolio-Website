@@ -1,0 +1,148 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="blog-post-container reveal delay-1">
+    <div class="header-content brutal-border brutal-shadow">
+      <h1 class="page-title">{frontmatter.title}</h1>
+      <div class="post-meta">
+        <span class="date">{frontmatter.date}</span>
+      </div>
+    </div>
+    
+    <div class="blog-content brutal-border brutal-shadow">
+      <slot />
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .blog-post-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+  }
+
+  .blog-post-container .header-content {
+    background: var(--text-main);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .blog-post-container .page-title {
+    font-size: clamp(2rem, 8vw, 5rem);
+    color: var(--bg-color);
+    margin: 0;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .blog-post-container .post-meta {
+    margin-top: var(--spacing-md);
+  }
+
+  .blog-post-container .date {
+    font-family: var(--font-mono);
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 1.2rem;
+    background: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border: var(--border-thick) solid var(--bg-color);
+    display: inline-block;
+  }
+
+  .blog-content {
+    background: var(--bg-color);
+    padding: var(--spacing-xl);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .blog-content h1, 
+  .blog-content h2, 
+  .blog-content h3 {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-main);
+    background: transparent;
+  }
+  
+  .blog-content h1:first-child,
+  .blog-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .blog-content p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .blog-content ul, 
+  .blog-content ol {
+    margin-bottom: var(--spacing-md);
+    margin-left: var(--spacing-lg);
+  }
+
+  .blog-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-content code {
+    background: var(--text-main);
+    color: var(--bg-color);
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+    font-family: var(--font-mono);
+  }
+
+  .blog-content pre {
+    background: var(--text-main) !important;
+    color: var(--bg-color) !important;
+    padding: var(--spacing-md);
+    border: var(--border-thick) solid var(--accent-color);
+    box-shadow: 8px 8px 0px 0px var(--accent-color);
+    margin-bottom: var(--spacing-lg);
+    overflow-x: auto;
+  }
+
+  .blog-content pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
+
+  .blog-content blockquote {
+    border-left: var(--border-thick) solid var(--accent-color);
+    padding-left: var(--spacing-md);
+    margin-left: 0;
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  .blog-content a {
+    text-decoration: underline;
+  }
+  
+  .blog-content img {
+    max-width: 100%;
+    height: auto;
+    border: var(--border-thick) solid var(--text-main);
+    margin-bottom: var(--spacing-md);
+  }
+
+  @media (max-width: 768px) {
+    .blog-content {
+      padding: var(--spacing-md);
+    }
+    .blog-post-container .header-content {
+      padding: var(--spacing-md);
+    }
+    .blog-post-container .page-title {
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+  }
+</style>

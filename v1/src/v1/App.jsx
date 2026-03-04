@@ -2,7 +2,7 @@ import Intro from "./Intro/Intro"
 import About from "./About/About"
 import Experience from "./Experience/Experience"
 import Project from "./Project/Project"
-import "./index.css"
+//import "./v1.css"
 import { useState, useEffect } from 'react';
 
 function App() {
