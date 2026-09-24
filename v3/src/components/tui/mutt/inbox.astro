@@ -1,0 +1,32 @@
+---
+export interface Mail {
+  selected?: boolean;
+  from: string;
+  label: string;
+  href: string;
+}
+
+export interface Props {
+  mails: Mail[];
+}
+
+const { mails } = Astro.props;
+---
+
+<div class="font-mono my-2">
+  {mails.map(({ from, label, href }) => (
+    <a
+      class="flex flex-col sm:flex-row sm:justify-between sm:gap-4 group rounded-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
+      href={href}
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
+      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+    >
+      <span class="shrink-0 group-hover:text-accent text-c2">
+        {from}
+      </span>
+      <span class="min-w-0 break-all text-dim sm:text-right">
+        {label}
+      </span>
+    </a>
+  ))}
+</div>

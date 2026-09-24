@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import portrait from "@/assets/nate-pixelated.png";
+import nvidia from "@/assets/nvidia-pixelated.png";
+import sunset from "@/assets/sunset-pixelated.png";
+import Prompt from "@/components/tui/commons/prompt.astro";
+import config from "@/config.json";
+import Bio from "./bio.astro";
+import Status from "./status.astro";
+
+const about = config.sections.about;
+const photos = [
+  { src: portrait, alt: "Nathaniel Martes speaking at a Wilkes University podium, lightly pixelated." },
+  { src: nvidia, alt: "Four people gathered around the NVIDIA campus sign, lightly pixelated." },
+  { src: sunset, alt: "A person sitting on a boulder beneath a crescent moon at sunset, lightly pixelated." },
+];
+---
+
+<Prompt cmd={about.command} class="mb-5" />
+<div class="grid grid-cols-1 gap-5">
+  <Status status={about.status} />
+  <div class="flex flex-wrap items-start gap-3 sm:gap-4">
+    {photos.map(({ src, alt }) => (
+      <Image
+        src={src}
+        alt={alt}
+        width={Math.round(192 * src.width / src.height)}
+        height={192}
+        widths={[Math.round(192 * src.width / src.height), Math.round(384 * src.width / src.height)]}
+        sizes={`${Math.round(192 * src.width / src.height)}px`}
+        format="webp"
+        class="h-48 w-auto max-w-full border border-dim object-contain"
+      />
+    ))}
+  </div>
+  <Bio items={about.bio} />
+</div>

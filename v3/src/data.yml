@@ -1,0 +1,220 @@
+site:
+  title: "Nathaniel's Website"
+  description: Astro + Tailwind fastfetch-style portfolio template. TUI components, themeable systems, projects synced from GitHub via YAML.
+  url: https://example.com
+  author: nate
+  handle_suffix: nathanielmartes.com
+  image: /og.png
+  image_width: 1200
+  image_height: 630
+  theme_color: '#1793d1'
+  job_title: astro-distro template
+  social:
+    github: ''
+  twitter: ''
+  locale: en
+  type: website
+  default_theme: linuxmint
+  footer:
+    status: session closed
+    errors: 0
+    warnings: 0
+    uptime: 5y
+
+current: linuxmint
+booted_at: '2026-08-20T10:00:00Z'
+host:
+  name: nathanielmartes.com
+  cpu: AMD Ryzen 7 7700
+  gpu: AMD Radeon RX 7700 XT
+  memory: 32 GB DDR5
+  resolution: 2560x1440
+about:
+  command: lazygit --view bio
+  status:
+    branch: main
+    since: 2026
+    ahead: 1
+    behind: 0
+    modified: 2
+    untracked: 0
+  bio:
+    - icon: ""
+      text: >-
+        My passion for programming started in high school, where I began by creating simple—and sometimes humorous—platformer games. Those early projects sparked a curiosity that led me to explore the deeper layers of the software world.
+    - icon: ""
+      text: >-
+        As I delved further, I realized how integral software is to our daily lives, shaping everything from how we communicate to how we solve complex problems. This journey has not only honed my technical skills but also deepened my understanding of the profound impact that software has on society.
+    - icon: ""
+      text: >-
+        My drive to contribute to this ever-evolving field continues to grow as I learn more about its limitless possibilities.
+experience:
+  command: 'for file in ./experience/*; do cat "$file"; done'
+  jobs:
+    - role: "System Administrator Intern"
+      company: "Wilkes University"
+      companyUrl: "https://wilkes.edu"
+      startDate: "Jun 2024"
+      endDate: "Current"
+      description:
+        - "Automated Ubuntu server administration tasks using Ansible, saving 1 hour during software updates."
+        - "Received mentorship from senior system administrators during on-boarding to understand server design and tools."
+        - "Configured Python toolchains on workstations using Ansible, making it easier for students to debug programs."
+        - "Migrated LDAP database to LDAPS using Bash, Ansible, and Linux, ensuring heightened security for user credentials."
+      tech: ["Bash", "Ansible", "Linux", "Ubuntu", "Python", "LDAP", "LDAPS"]
+    - role: "Software Engineer Intern"
+      company: "NVIDIA"
+      companyUrl: "https://nvidia.com"
+      startDate: "May 2026"
+      endDate: "Sep 2026"
+      description:
+        - "Contributed to the open-source distributed object storage system OpenStack Swift, that manages 1+ EB of storage and supports autonomous vehicle AI workflows that create 160M+ requests per day."
+        - "Developed and tested Python middleware replicating AWS S3 checksums, enabling data workflows handling 41 PB to leverage 90% faster checksum algorithms while ensuring API compatibility through Pytest unit and functional tests."
+        - "Leveraged AI agents such as OpenAI’s Codex and Claude in agentic workflows to increase development speed."
+        - "Utilized Prometheus, Grafana, and OpenSearch to analyze and identify client requests at risk from upcoming updates."
+        - "Automated provisioning and teardown of distributed storage benchmarking environments using Ansible, Python, and Linux, reducing deployment time and improving testing efficiency."
+        - "Reviewed 20+ open-source patches, providing code design feedback to senior and non-senior engineers."
+        - "Collaborated with cross-functional teams to relay software release changes and new features for users and deployers."
+      tech: ["Python", "OpenStack Swift", "AWS S3", "Pytest", "Ansible", "Linux", "Prometheus", "Grafana", "OpenSearch", "Codex", "Claude"]
+    - role: "Software Engineer Intern"
+      company: "VetsEZ"
+      companyUrl: "https://vetsez.com"
+      startDate: "Sep 2025"
+      endDate: "May 2026"
+      description:
+        - "Built a microservice with a team of developers using Java, Spring Boot, OData and Postman, which created a REST API for legacy SQL schemas that supported crucial platform modernization efforts."
+        - "Utilized Python and Postman to automate regression testing of REST API remote producer call (RPC) execution, which saved the team 10 hours of manual regression testing."
+        - "Integrated test cases into a GitHub Actions CI/CD pipeline for a SwaggerUI OpenAPI documentation generator using Java, successfully increasing generator code coverage to 91%."
+        - "Optimized service efficiency by building a dedicated metadata caching layer using Java, Spring Boot, Docker, AWS ECS, and PostgreSQL, reducing startup latency for dependent APIs by 3 minutes."
+        - "Cooperated with several developers using Microsoft Teams and Github Issues, improving code quality and coherence."
+      tech: ["Java", "Spring Boot", "OData", "Python", "Postman", "GitHub Actions", "CI/CD", "OpenAPI", "Docker", "AWS ECS", "PostgreSQL", "REST"]
+    - role: "Software Engineer Intern"
+      company: "Software Engineering Institute at Carnegie Mellon University"
+      companyUrl: "https://sei.cmu.edu"
+      startDate: "May 2025"
+      endDate: "Aug 2025"
+      description:
+        - "Used Python, Git, Docker, and a REST API to create a vulnerability detector for installed software packages across all internally managed systems, cutting potential vulnerability detection time from 30 days down to 1 day."
+        - "Corrected 4,400+ SQLite entries with Python, achieving 100% accuracy in quarterly software license usage reports."
+        - "Built a Python and REST API tool to detect duplicate software license usage, saving 2 hours of manual data analysis."
+        - "Integrated 80+ test cases for internal Atlassian suite applications into DevOps CI/CD pipelines using Python, Pytest, and REST APIs, preventing deployment of misconfigured Docker containers."
+        - "Collaborated in an Agile environment using Jira to track project progress and participate in daily Stand-Up meetings, enhancing team communication and improving overall project understanding."
+      tech: ["Python", "Git", "Docker", "REST", "SQLite", "Pytest", "CI/CD", "Jira"]
+    - role: "DevOps Engineer Intern"
+      company: "Wilkes University"
+      companyUrl: "https://wilkes.edu"
+      startDate: "Jun 2024"
+      endDate: "Aug 2024"
+      description: ["Deployed a 15+ page dynamic and scalable web application using Kubernetes (K3s), Docker, Wordpress, MySQL, HTML and CSS to present undergraduate research focused on the content analysis of religious sermons.", "Architected a K3s cluster consisting of 4 heterogeneous Linux nodes, to simulate an AWS Elastic Kubernetes Service (EKS) development environment, integrating the Ingress service for scalable load balancing.", "Met with professor bi-weekly to discuss server and website architecture which led to optimized design choices."]
+      tech: ["Kubernetes", "Docker", "Wordpress", "Linux", "HTML", "CSS"]
+    - role: "Data Science Intern"
+      company: "Wilkes University"
+      companyUrl: "https://wilkes.edu"
+      startDate: "Jan 2024"
+      endDate: "Mar 2024"
+      description: ["Analyzed methodological diversity of over 77 academic professors to find correlations in methodologies across disciplines.", "Utilized Python to create a Spearman Correlation Matrix, revealing 2 out of 12 axes being moderately correlated. Displayed results using Tableau, scoring an 89% on the judging report at the 78th Annual Eastern Colleges Science Conference (ECSC)."]
+      tech: ["Python", "Tableau"]
+uses:
+  command: btop --view stack — daily usage && hardware
+  cpu:
+    label: CPU [daily usage]
+    usage:
+      - label: editor
+        percent: 100
+        detail: zed / vscode
+      - label: terminal
+        percent: 60
+        detail: alacritty + tmux
+      - label: browser
+        percent: 20
+        detail: firefox / brave
+      - label: notes
+        percent: 10
+        detail: obsidian
+        note: (markdown sync)
+      - label: music
+        percent: 10
+        detail: navidrome
+        note: (lastfm scrobbling)
+      - label: theme
+        percent: 50
+        detail: tokyo night
+      - label: font
+        percent: 40
+        detail: JetBrains Mono
+  memory:
+    used: 16
+    total: 32
+    theme: tokyo night
+    themePercent: 50
+  hardware:
+    label: hardware
+    device: devbox
+    ram: 32 GB DDR5
+    os: Debian 13 Trixie
+  peripherals:
+    label: peripherals
+    keyboard: Keychron K6
+    mouse: Logitech G Pro
+    headphones: generic
+    monitor: 2 x 27" 1440p
+contact:
+  command: mutt -f nathaniel.martes.business@gmail.com
+  email: nathaniel.martes.business@gmail.com
+  inbox:
+    - from: email
+      label: nathaniel.martes.business@gmail.com
+      href: mailto:nathaniel.martes.business@gmail.com
+    - from: linkedin.com
+      label: nathaniel-martes
+      href: https://www.linkedin.com/in/nathaniel-martes/
+    - from: github.com
+      label: NateMartes
+      href: https://github.com/NateMartes
+    - from: medium.com
+      label: '@nathaniel.martes.business'
+      href: https://medium.com/@nathaniel.martes.business
+    - from: instagram.com
+      label: '@nate_0901'
+      href: https://www.instagram.com/nate_0901/
+  hints:
+    - key: tab
+      action: next
+    - key: enter
+      action: open
+projects_ui:
+  command: ranger /home/nate/projects
+  root: /home/nate
+  items:
+    - name: "Lotlytics"
+      description: "Lotlytics is a cloud-native parking-intelligence platform. Edge devices count vehicles in real time; the web app shows live availability and turn-by-turn directions so drivers can plan trips and skip the circling. Works for Google Maps, Apple Maps, and Waze."
+      url: "https://github.com/NateMartes/Lotlytics"
+      skills: ["Java", "Python", "TypeScript", "NextJS", "OpenCV", "AWS", "Vercel", "Spring Boot", "PostgreSQL", "DynamoDB"]
+    - name: "Self Quest (Lehigh Hacks 2025)"
+      description: "Created a serverless full stack application using JavaScript, React, HTML, Tailwind CSS, Python, Git, and DynamoDB that creates AI interactive narrative chapters for therapy and user resonance which placed 1st with best use of AWS resources among 200+ participants at Lehigh University."
+      url: "https://devpost.com/software/selfquest-4mp2d3"
+      skills: ["AI", "Python", "JavaScript", "FastAPI", "AWS", "Git", "REST"]
+    - name: "Crown of the Abyss"
+      description: "Created A 4-player turn-based dungeon crawler using microservices. Built with Pygame, FastAPI, and SQLite. Designed microservice architecture which features a RESTful API and Websockets for connection between players. Deployed CI/CD pipelines with GitLab, Docker, and Pytest to lint, test, and deploy microservices."
+      url: "https://github.com/NateMartes/crown-of-the-abyss-v2"
+      skills: ["Python", "SQLite", "FastAPI", "Docker", "Git"]
+    - name: "RoomReady (HenHacks 2025)"
+      description: "The app takes user uploaded images about a room they are interested for preparing for natural disasters. Then we use selective prompting and generative AI on the received image to give back a risk analysis report, a checklist, and a list of improvements."
+      url: "https://devpost.com/software/roomready"
+      skills: ["Python", "FastAPI", "AI", "TypeScript", "React", "Docker"]
+    - name: "Course Scraper"
+      description: "Created a parallel web scraper to gather Wilkes University’s course data using Golang, MongoDB, and Docker. Implemented a RESTful API to query a NoSQL database with dynamic query parameters."
+      url: "https://github.com/Ichmagkase/WilkesU-Course-Web-Scraper"
+      skills: ["Go", "MongoDB", "HTML", "Git", "Docker"]
+    - name: "HTTP Server from Scratch"
+      description: "Developed a HTTP server using Node.JS, Node.JS's .net library, and TypeScript. Implemented a TCP server with a dynamic buffer to correctly parse HTTP requests and send HTTP responses depending on the corresponding URI."
+      url: "https://github.com/NateMartes/HTTP-Server"
+      skills: ["NodeJS", "TypeScript", "Git"]
+    - name: "CipherX"
+      description: "Built a GUI application with a team of 3 that allows users to save, copy, import, and export passwords. All passwords are stored behind a vault password that is hashed using the SHA-256 algorithm."
+      url: "https://github.com/NateMartes/CipherX"
+      skills: ["Java", "MySQL", "Git"]
+    - name: "Recipe Book"
+      description: "Utilized Python and the Tkinter Library to create a GUI Recipe Book with a team. Users can view over 50 recipes and add their own. Recipes are stored using JSON."
+      skills: ["Python"]
+projects: []

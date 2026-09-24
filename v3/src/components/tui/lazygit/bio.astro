@@ -1,0 +1,29 @@
+---
+import Container from "@/components/tui/commons/container.astro";
+import Content from "@/components/tui/commons/content.astro";
+import Label from "@/components/tui/commons/label.astro";
+import Paragraph from "@/components/tui/commons/paragraph.astro";
+
+export interface Item {
+  icon: string;
+  text: string;
+}
+
+export interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<Container>
+  <Label>bio</Label>
+  <Content>
+    {items.map(item => (
+      <Paragraph>
+        {item.icon && <span class="font-medium text-accent">{item.icon}</span>}
+        <span>{item.text}</span>
+      </Paragraph>
+    ))}
+  </Content>
+</Container>

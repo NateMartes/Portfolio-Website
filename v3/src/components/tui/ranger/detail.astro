@@ -1,0 +1,38 @@
+---
+import Container from "@/components/tui/commons/container.astro";
+import Content from "@/components/tui/commons/content.astro";
+import Label from "@/components/tui/commons/label.astro";
+
+export interface Props {
+  projects: {
+    name: string;
+    description: string;
+    url?: string;
+    skills?: string[];
+  }[];
+}
+
+const { projects } = Astro.props;
+---
+
+{projects.map((project, i) => (
+  <div id={`project-detail-${i}`} data-detail={i} hidden={i !== 0} class="h-full">
+    <Container>
+      <Label>{project.name}</Label>
+      <Content>
+        <div class="mb-2">{project.description}</div>
+        <ul aria-label="Skills and technologies" class="my-3 flex flex-wrap gap-2">
+          {project.skills?.map((skill) => (
+            <li class="border border-border bg-panel px-2 py-0.5 text-sm text-accent">{skill}</li>
+          ))}
+        </ul>
+        {project.url && <a
+          class="mt-[0.4rem] inline-block text-accent hover:underline"
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          >{new URL(project.url).hostname === "github.com" ? "→ repo" : "→ view project"}</a>}
+      </Content>
+    </Container>
+  </div>
+))}

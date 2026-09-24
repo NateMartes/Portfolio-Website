@@ -1,0 +1,43 @@
+---
+import type { MarkdownInstance } from "astro";
+import Layout from "@/layouts/default.astro";
+import Prompt from "@/components/tui/commons/prompt.astro";
+
+interface Post {
+  title: string;
+  description: string;
+  date: string | Date;
+}
+
+const posts = Object.values(import.meta.glob<MarkdownInstance<Post>>("./*.md", { eager: true }))
+  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+---
+
+<Layout title="Blogs | Nathaniel Martes" description="Technical write-ups and notes by Nathaniel Martes.">
+  <a href="/" class="text-accent underline underline-offset-4">cd .. <span class="text-dim">/ home</span></a>
+  <header class="mt-8 mb-6">
+    <h1 class="text-accent font-medium mb-2">~/blogs</h1>
+    <p class="text-fg">Technical write-ups and notes.</p>
+  </header>
+  <section aria-label="Blog posts" class="border border-border bg-panel p-4 sm:p-6">
+    <Prompt cmd="ls ./blogs" class="mb-5" />
+    <ul class="divide-y divide-border">
+      {posts.map((post) => (
+        <li class="py-4 first:pt-0 last:pb-0">
+          <a href={post.url} class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm mb-2">
+              <span aria-hidden="true" class="text-dim">-rw-r--r--</span>
+              <time datetime={new Date(post.frontmatter.date).toISOString().slice(0, 10)} class="text-fg">
+                {new Date(post.frontmatter.date).toISOString().slice(0, 10)}
+              </time>
+              <span class="text-accent underline underline-offset-4 group-hover:decoration-accent">{post.file.split("/").pop()}</span>
+            </div>
+            <h2 class="text-accent font-medium mb-2 group-hover:underline">{post.frontmatter.title}</h2>
+            <p class="text-sm leading-relaxed">{post.frontmatter.description}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="mt-5 border-t border-border pt-3 text-dim text-sm">{posts.length} {posts.length === 1 ? "file" : "files"}</p>
+  </section>
+</Layout>

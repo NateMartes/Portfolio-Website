@@ -1,0 +1,43 @@
+---
+import Layout from "./default.astro";
+import Prompt from "@/components/tui/commons/prompt.astro";
+
+interface Props {
+  frontmatter: { title: string; description: string; date: string | Date };
+}
+const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.date).toISOString().slice(0, 10);
+const filename = Astro.url.pathname.split("/").filter(Boolean).pop();
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <nav aria-label="Blog navigation" class="flex flex-wrap gap-5 mb-8 text-accent">
+    <a href="/blogs" class="underline underline-offset-4">cd ../ <span class="text-dim">blogs</span></a>
+    <a href="/" class="underline underline-offset-4">cd ~ <span class="text-dim">home</span></a>
+  </nav>
+  <Prompt cmd={`cat ./blogs/${filename}.md`} />
+  <article>
+    <header class="border-b border-border pb-6 mb-6">
+      <h1 class="text-accent text-xl sm:text-2xl font-medium leading-snug mb-3">{frontmatter.title}</h1>
+      <time datetime={date} class="text-sm text-dim">{date}</time>
+    </header>
+    <div class="blog-content"><slot /></div>
+  </article>
+</Layout>
+
+<style is:global>
+  .blog-content { line-height: 1.8; overflow-wrap: anywhere; }
+  .blog-content > * + * { margin-top: 1.25rem; }
+  .blog-content :is(h2, h3, h4) { color: var(--color-accent); font-weight: 600; margin-top: 2rem; line-height: 1.4; }
+  .blog-content h2 { font-size: 1.2rem; }
+  .blog-content h3 { font-size: 1.05rem; }
+  .blog-content ul { list-style: disc; padding-left: 1.5rem; }
+  .blog-content ol { list-style: decimal; padding-left: 1.5rem; }
+  .blog-content li + li { margin-top: .5rem; }
+  .blog-content a { color: var(--color-accent); text-decoration: underline; text-underline-offset: .2em; }
+  .blog-content pre { padding: 1rem; overflow-x: auto; border: 1px solid var(--color-border); font-size: .85rem; }
+  .blog-content :not(pre) > code { background: var(--color-panel); color: var(--color-accent); padding: .15rem .3rem; }
+  .blog-content blockquote { border-left: 2px solid var(--color-accent); padding: .75rem 1rem; background: var(--color-panel); }
+  .blog-content hr { border-color: var(--color-border); margin-block: 2rem; }
+  .blog-content img { max-width: 100%; height: auto; }
+</style>
