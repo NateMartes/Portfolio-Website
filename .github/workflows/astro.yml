@@ -23,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "v2"
+  BUILD_PATH: "v3"
 
 jobs:
   build:
