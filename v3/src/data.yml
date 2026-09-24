@@ -1,14 +1,14 @@
 site:
   title: "Nathaniel's Website"
-  description: Astro + Tailwind fastfetch-style portfolio template. TUI components, themeable systems, projects synced from GitHub via YAML.
-  url: https://example.com
+  description: "Nathaniel Martes — Software engineer focused on distributed systems, DevOps, automation, and open source. Explore my projects, experience, and technical blog."
+  url: https://nathanielmartes.com
   author: nate
   handle_suffix: nathanielmartes.com
   image: /og.png
   image_width: 1200
   image_height: 630
   theme_color: '#1793d1'
-  job_title: astro-distro template
+  job_title: Software Engineer
   social:
     github: ''
   twitter: ''
